@@ -1,0 +1,280 @@
+/* CSS Variables */
+:root {
+    --dark: #2D2D3D;
+    --light: #DFDFE1;
+    --darkOlive: #95A674;
+    --lightOlive: #B5CA8D;
+    --pink: #FFA68D;
+    --shadow: 4px 4px 7px var(--dark);
+}
+
+/* Applied to All */
+* {
+    border: .1px solid var(--pink);
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--light);
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    color: var(--dark);
+}
+
+/* Header Section */
+header {
+    background-color: var(--dark);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+header * {
+    background-color: var(--dark);
+    color: var(--light);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#logo {
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display:inline-block;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+.nav-links li a{
+    transition: color 1s ease;
+    font-size: 14px;
+}
+
+.nav-links li a:hover {
+    color: var(--darkOlive);
+}
+
+header button {
+    color: var(--dark);
+    background-color: var(--lightOlive);
+    padding: 5px 20px;
+    /* margin: 0px 10px; */
+    border: 1px solid var(--dark);
+    border-radius: 20px;
+    transition: color 1s ease;
+    transition: background-color .5s ease;
+    margin: 0px 10px;
+}
+
+header button:focus {
+    outline: none;
+}
+
+header button:hover {
+    color: var(--lightOlive);
+    background-color: var(--dark);
+    cursor: pointer;
+    border: 1px solid var(--lightOlive);
+}
+
+/* Main Welcome Section */
+.main-section {
+    display: grid;
+    grid-template-columns: 2fr 10fr 5fr 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+        "top-break top-break top-break top-break"
+        "left-break main-note main-img right-break"
+        "bot-break bot-break bot-break bot-break";
+}
+
+.top-break {
+    grid-area: top-break;
+}
+
+.left-break {
+    grid-area: left-break;
+}
+
+.main-note {
+    grid-area: main-note;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 2rem;
+}
+
+.main-note h1 {
+    padding: 20px 0;
+    line-height: 5vw;
+    font-size: 4vw;
+}
+
+.main-image {
+    grid-area: main-img;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.main-image img{
+    height: 300px;
+}
+
+.main-image img:hover {
+    animation: shake 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(7deg) scale(1.1);
+    }
+    20% {
+        transform: rotate(9deg) scale(1.1);
+    }
+    40% {
+        transform: rotate(7deg) scale(1.1);
+    }
+    60% {
+        transform: rotate(9deg) scale(1.1);
+    }
+    80% {
+        transform: rotate(7deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(7deg) scale(1.1);
+    }
+}
+
+.right-break {
+    grid-area: right-break;
+}
+
+.bot-break {
+    grid-area: bot-break;
+}
+
+/* Component Section */
+.component-section {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 30px 200px 1fr 100px;
+    grid-template-areas: 
+    "top-break-2 top-break-2 top-break-2"
+    "component-note component-note component-note"
+    "left-break-2 component-boxes right-break-2"
+    "bot-break-2 bot-break-2 bot-break-2";
+}
+
+.top-break-2 {
+    grid-area: top-break-2;
+}
+
+.left-break-2 {
+    grid-area: left-break-2;
+}
+
+.bot-break-2 {
+    grid-area: bot-break-2;
+}
+
+.component-section .component-note {
+    background-color: var(--dark);
+}
+
+.component-note {
+    grid-area: component-note;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.component-note * {
+    background-color: var(--dark);
+    color: var(--darkOlive);
+}
+
+.right-break-2 {
+    grid-area:right-break-2;
+}
+
+/* Component Boxes Gid */
+.component-boxes {
+    grid-area: component-boxes;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 90px;
+    padding: 90px;
+}
+
+.component-box {
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+    height: 100%;
+    background-color: lightcoral;
+}
+.component-box h4 {
+    background-color: var(--dark);
+    color: var(--lightOlive);
+    padding: 10px;
+    text-align: center;
+}
+
+.component-box div {
+    flex-grow: 1; 
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+#the-glass {
+    background-image: url('/img/glass-drawn.png'); 
+}
+
+#the-liqour {
+    background-image: url('/img/gin-drawn.png'); 
+}
+
+#the-flavor {
+    background-image: url('/img/flavor-drawn.png'); 
+}
+
+#the-ratio {
+    background-image: url('/img/ratio-drawn.png'); 
+}
+
+#the-process {
+    background-image: url('/img/process-drawn.png'); 
+}
+
+#the-garnish {
+    background-image: url('/img/garnish-drawn.png'); 
+}
+
+.component-box img {
+    filter: grayscale(100%);
+    filter: contrast(150%);
+    max-height: 250px;
+}
+
+.component-box:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 10px var(--darkOlive);
+}
+
+/* Footer Section */
+.footer-bar *{
+    background-color: var(--dark);
+    color: var(--lightOlive);
+    padding: 20px;
+    font-size: 12px;
+}
