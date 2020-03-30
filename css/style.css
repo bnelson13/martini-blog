@@ -172,8 +172,8 @@ header button:hover {
     margin: 0 auto;
     width: 75%;
     max-width: 1000px;
-    padding: 50px;
-    grid-gap: 50px;
+    padding: 5vw;
+    grid-gap: 5vw;
     align-items: center;
     justify-content: center;
 }
