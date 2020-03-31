@@ -1,0 +1,13 @@
+.construction-box {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.construction-box * {
+    text-align: center;
+    padding: 20px;
+}
