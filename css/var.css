@@ -1,0 +1,9 @@
+/* CSS Variables */
+:root {
+    --dark: #2D2D3D;
+    --light: #FFF;
+    --darkOlive: #95A674;
+    --lightOlive: #B5CA8D;
+    --pink: #FFA68D;
+    --shadow: 4px 4px 7px var(--dark);
+}

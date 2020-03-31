@@ -1,23 +1,6 @@
-/* CSS Variables */
-:root {
-    --dark: #2D2D3D;
-    --light: #FFF;
-    --darkOlive: #95A674;
-    --lightOlive: #B5CA8D;
-    --pink: #FFA68D;
-    --shadow: 4px 4px 7px var(--dark);
-}
-
-/* Applied to All */
-* {
-    /* border: .1px solid var(--pink); */
-    margin: 0px;
-    padding: 0px;
-    background-color: var(--light);
-    box-sizing: border-box;
-    font-family: "Montserrat";
-    color: var(--dark);
-}
+@import 'all.css';
+@import 'var.css';
+@import 'the-glass.css';
 
 /* Header Section */
 header {
@@ -231,130 +214,6 @@ header button:hover {
     box-shadow: 4px 4px 10px var(--darkOlive);
 }
 
-/* Types of Glass Section */
-.the-glasses {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 
-    "trad-img trad-note"
-    "stem-img stem-note"
-    "coupe-img coupe-note"
-    "zstem-img zstem-note"
-    "nicnora-img nicnora-note";
-    margin: 50px auto;
-    width: 80%;
-    grid-gap: 5vw;
-}
-
-.glass-img {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    height: 200px;
-}
-
-.glass-notes {
-    display: flex;
-    flex-direction: column;
-    line-height: 2.5vh;
-    justify-content: center;
-    border-bottom: 2px solid var(--dark);
-}
-
-.glass-notes h3 {
-    margin-bottom: 10px;
-    background-color: var(--light);
-}
-
-.glass-notes p {
-    color: var(--dark);
-    background-color: var(--light);
-    text-align: left;
-    padding: 5px 0;
-}
-
-#img-traditional {
-    grid-area: trad-img;
-    background-image: url("/img/the-glass-traditional.jpeg");
-}
-
-#note-traditional {
-    grid-area: trad-note;
-}
-
-#img-stemless {
-    grid-area: stem-img;
-    background-image: url("/img/the-glass-stemless.jpg");
-}
-
-#note-stemless {
-    grid-area: stem-note;
-}
-
-#img-coupe {
-    grid-area: coupe-img;
-    background-color: #FFF;
-    background-image: url("/img/the-glass-coupe.jpg");
-}
-
-#note-coupe {
-    grid-area: coupe-note;
-}
-
-#img-zstem {
-    grid-area: zstem-img;
-    background-image: url("/img/the-glass-zstem.jpg");
-}
-
-#note-zstem {
-    grid-area: zstem-note;
-}
-
-#img-nicnora {
-    grid-area: nicnora-img;
-    background-image: url("/img/the-glass-nicnora.png");
-}
-
-#note-nicnora {
-    grid-area: nicnora-note;
-}
-
-.glass-winner-break {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 90px 0;
-    background-color: var(--dark);
-}
-
-.glass-winner-break h2 {
-    background-color: var(--dark);
-    color: var(--lightOlive);
-    font-size: calc(12px + 4vw);
-}
-
-.the-winner {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 
-    "tour-img tour-note";
-    margin: 50px auto;
-    width: 80%;
-    grid-gap: 5vw;
-}
-
-#img-tour {
-    grid-area: tour-img;
-    background-image: url("/img/the-glass-tour.jpg");
-}
-
-#note-tour {
-    grid-area: tour-note;
-    border: 0;
-}
 
 /* Footer Section */
 .footer-bar {
@@ -405,6 +264,17 @@ header button:hover {
 
     .main-section {
         grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .main-note p {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .main-note h1 {
+        padding-left: 0;
+        padding: 5px;
     }
 
     .social-media p {
@@ -423,6 +293,7 @@ header button:hover {
 
     header {
         display: block;
+        position: relative;
     }
 
     header ul li{
@@ -437,40 +308,9 @@ header button:hover {
     }
 
     header button {
-        margin-left: 43vw;
-    }
-
-    .the-glasses {
-        display: grid;
-        grid-template-rows: repeat(10, 1fr);
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "trad-img"
-        "trad-note"
-        "stem-img"
-        "stem-note"
-        "coupe-img"
-        "coupe-note"
-        "zstem-img"
-        "zstem-note"
-        "nicnora-img"
-        "nicnora-note";
-        margin: 0px auto;
-        grid-gap: 0vw;
-    }
-
-    .the-winner {
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "tour-img"
-        "tour-note";
-        margin: 0 auto;
-        grid-gap: 0vw;
-    }
-
-    .glass-winner-break {
-        margin-bottom: 50px;
-    }
-    
+        position: absolute;
+        margin: -15% 72%;
+        height: 60px;
+        font-size: 20px;
+    } 
 }

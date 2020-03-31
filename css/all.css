@@ -1,0 +1,10 @@
+/* Applied to All */
+* {
+    /* border: .1px solid var(--pink); */
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--light);
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    color: var(--dark);
+}
